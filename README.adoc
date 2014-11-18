@@ -1,0 +1,1 @@
+This is a standing repo where the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_] will be released.
