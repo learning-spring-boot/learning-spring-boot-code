@@ -1,1 +1,11 @@
-This is a standing repo where the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_] will be released.
+image::http://blog.greglturnquist.com/wp-content/uploads/2014/11/3021OS_mockupcover_normal.png[float="right"]
+
+This is a standing repo of the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_].
+
+While not evident when you read the book, each chapter has a progressive approach regarding code. At various phases through each chapter, new features are added. To snapshot that, I create a separate app (using numbering) in the relevant chapter. To see the final version of the app, simply jump to the last app.
+
+If you are looking for the details explaining each app, please https://www.packtpub.com/application-development/learning-spring-boot[order a copy of the book].
+
+It may sound presumptuous, but I have high confidence in the fidelity of the code. I developed each version of each chapter's app inside my IDE and ran it repeatedly. Since I http://blog.greglturnquist.com/2014/05/asciidoc-springboot-packtpub-awesome-tool-chain.html[wrote the entire book using Asciidoctor], I simply imported the source code directly into the manuscript. The risk at hand is not importing some aspect of the app.
+
+NOTE: I froze the code against https://spring.io/blog/2014/09/05/spring-boot-1-1-6-released[Spring Boot 1.1.6.RELEASE]. That was the point when I had to turn things over to Packt. I haven't decided how to make upgrades. If you are reading the book, naturally you want to see an identical cut of the code as to the book. Perhaps I'll craft a branch and upgrade things there to use the latest version of Spring Boot. Stay tuned. In the meantime, http://www.urbandictionary.com/define.php?term=share%20and%20enjoy[share and enjoy]!
