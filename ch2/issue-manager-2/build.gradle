@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
+
+jar {
+    baseName = 'issue-manager'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// tag::spring-snapshots[]
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/libs-snapshot" }
+}
+// end::spring-snapshots[]
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    //  tag::spring-social-github[]
+    compile("org.springframework.social:spring-social-github:1.0.0.BUILD-SNAPSHOT")
+    //  end::spring-social-github[]     
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}

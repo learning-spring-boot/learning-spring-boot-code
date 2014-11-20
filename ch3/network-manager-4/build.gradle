@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+        classpath 'org.ajoberstar:gradle-git:0.10.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'network-monitor'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+clean {
+    delete "activemq-data"
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework:spring-jms")
+    compile("org.apache.activemq:activemq-broker")
+    // tag::actuator[]
+    compile("org.springframework.boot:spring-boot-actuator")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    // end::actuator[]
+}
+
+// tag::git-plugin[]
+import org.ajoberstar.grgit.*
+
+configure(rootProject) {
+    task gitMetadata << {
+        ext {
+            repo = Grgit.open(project.file('../..'))
+            branch = repo.branch?.current?.name
+            commitId = repo.head().abbreviatedId
+            commitTime = new Date(new Integer(repo.head().time)
+                    .longValue()*1000L).format("yyyy-MM-dd HH:mm")
+        }
+    }
+
+    apply from: 'writeGitPropertiesFile.gradle'
+}
+// end::git-plugin[]
+
+// tag::properties[]
+import org.apache.tools.ant.filters.*
+
+afterEvaluate {
+    configure(allProcessResourcesTasks()) {
+        filter(ReplaceTokens,
+            tokens: [baseName: project.jar.baseName,
+                     version: project.jar.version,
+                     gradleVersion: project.gradle.gradleVersion]
+        )
+    }
+}
+
+def allProcessResourcesTasks() {
+    sourceSets*.processResourcesTaskName.collect {
+        tasks[it]
+    }
+}
+// end::properties[]
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}

@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <p>Open GitHub Issues</p>
+    <table>
+        <thead>
+            <tr>
+                <td>Repo</td>
+                <td>Issue</td>
+                <td>Title</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="issue : ${issues}">
+                <td th:text="${issue.repo}"></td>
+                <td>
+                    <a th:href="${issue.githubIssue.htmlUrl}" target="_blank">
+                        <span th:text="${issue.githubIssue.number}"/>
+                    </a>
+                </td>
+                <td th:text="${issue.githubIssue.title}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

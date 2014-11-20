@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Learning Spring Boot - Chapter 1</title>
+        <script src="webjars/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('p').animate({
+                    fontSize: '48px',
+                }, "slow");
+            });
+        </script>
+    </head>
+    <body>
+        <p th:text="'Hello, ' + ${name}"></p>
+        <ol>
+            <li th:each="chapter : ${chapters}" th:text="${chapter}"></li>
+        </ol>
+    </body>
+</html>

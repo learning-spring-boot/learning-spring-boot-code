@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Learning Spring Boot - Chapter 5</title>
+</head>
+<body>
+    <div th:include="_links :: security" />
+
+    <h2>All Teammates</h2>
+
+    <ul>
+        <li th:each="t : ${teammates}">
+            <a th:href="${t.link.href}"
+               th:text="${t.teammate.firstName} + ' ' + ${t.teammate.lastName} + ' plays ' + ${t.teammate.position}"/>
+        </li>
+    </ul>
+
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        <h2>Create a new teammate</h2>
+
+        <form th:action="${postLink.href}" th:object="${teammate}" method="post">
+            <input type="text" th:field="*{firstName}" />
+            <input type="text" th:field="*{lastName}" />
+            <input type="text" th:field="*{position}" />
+            <input type="submit" />
+        </form>
+    </div>
+
+    <div th:include="_links :: nav"/>
+</body>
+</html>

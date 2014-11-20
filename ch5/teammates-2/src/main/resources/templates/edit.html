@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Learning Spring Boot - Chapter 5</title>
+</head>
+<body>
+    <h2>Edit a teammate</h2>
+
+    <form th:action="${putLink.href}" th:object="${teammate}" th:method="put">
+        <input type="text" th:field="*{firstName}" />
+        <input type="text" th:field="*{lastName}" />
+        <input type="text" th:field="*{position}" />
+        <input type="submit" />
+    </form>
+
+    <div th:include="_links :: nav"/>
+</body>
+</html>

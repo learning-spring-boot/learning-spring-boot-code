@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="jquery-mobile-bower/css/jquery.mobile-1.4.2.css" />
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery-mobile-bower/js/jquery.mobile-1.4.2.js"></script>
+</head>
+<body>
+    <div data-role="page" id="home">
+
+        <div data-role="header" data-position="fixed">
+            <a href="/" data-icon="home" data-iconpos="notext"></a>
+            <h1>Issue Manager Mobile</h1>
+        </div>
+
+        <div data-role="content">
+            <ul data-role="listview">
+                <li th:each="issue : ${issues}">
+                    <a th:href="${issue.githubIssue.htmlUrl}" target="_blank"
+                       th:text="${issue.githubIssue.title}">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

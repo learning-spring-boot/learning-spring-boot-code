@@ -1,0 +1,20 @@
+task writeGitPropertiesFile(dependsOn: [ rootProject.gitMetadata, processResources ]) {
+    ext.outputFile = file("${sourceSets.main.output.resourcesDir}/git.properties")
+
+    doLast() {
+        new Properties(
+                'git.branch' : gitMetadata.branch,
+                'git.commit.id' : gitMetadata.commitId,
+                'git.commit.time' : gitMetadata.commitTime
+        ).store(new BufferedWriter(new FileWriter(outputFile)) {
+            public void write(String s, int off, int len) throws IOException {
+                if (s.startsWith("#")) {
+                    return
+                }
+                super.write(s, off, len)
+            }
+        }, null)
+    }
+}
+jar.inputs.file writeGitPropertiesFile.outputFile
+jar.dependsOn writeGitPropertiesFile

@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="nav">
+    <h3>Links:</h3>
+    <ul>
+        <li th:each="link : ${links}">
+            <a th:href="${link.href}" th:text="${link.rel}"/>
+        </li>
+    </ul>
+</div>
+
+</html>

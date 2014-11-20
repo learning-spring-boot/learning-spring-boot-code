@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>Learning Spring Boot - Chapter 1</title>
+    </head>
+    <body>
+        <p th:text="'Hello, ' + ${name}"></p>
+        <ol>
+            <li th:each="chapter : ${chapters}" th:text="${chapter}"></li>
+        </ol>
+    </body>
+</html>

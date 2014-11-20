@@ -1,0 +1,41 @@
+// tag::plugins[]
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+    }
+}
+// end::plugins[]
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
+
+jar {
+    baseName = 'issue-manager'
+    version = '0.0.1-SNAPSHOT'
+}
+
+// tag::version[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+// end::version[]
+
+repositories {
+    mavenCentral()
+}
+
+
+// tag::dependencies[]
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+// end::dependencies[]
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}

@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="nav">
+    <h3>Links:</h3>
+    <ul>
+        <li th:each="link : ${links}">
+            <a th:href="${link.href}" th:text="${link.rel}"/>
+        </li>
+    </ul>
+</div>
+
+<!-- tag::security[] -->
+<div th:fragment="security">
+
+    <div>
+        <span sec:authentication="name" /> has
+        <span sec:authentication="authorities" />
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+    <hr />
+
+</div>
+<!-- end::security[] -->
+
+</html>
