@@ -1,6 +1,8 @@
 image::http://blog.greglturnquist.com/wp-content/uploads/2014/11/3021OS_mockupcover_normal.png[float="right"]
 
-This is a standing repo of the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_].
+This is a standing repo of the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_]. While the book explains how to use the gradle wrapper, the code here already has the gradle wrapper set up. That means that for http://gradle.org/[gradle-based] apps, you can immediately run them assuming you have Java installed on your box.
+
+CAUTION: No have Java? I suggest you download and install http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8 Development Kit (JDK)]. The book is based on using Java 8 to build and run everything.
 
 While not evident when you read the book, each chapter has a progressive approach regarding code. At various phases through each chapter, new features are added. To snapshot that, I create a separate app (using numbering) in the relevant chapter. To see the final version of the app, simply jump to the last app.
 
