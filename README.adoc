@@ -24,4 +24,4 @@ The code in this project is licensed http://apache.org/licenses/LICENSE-2.0.txt[
 
 == Contributions
 
-Please read the related link:CONTRIBUTING.adoc[link:CONTRIBUTING] document if you are interested in making contributions.
+Please read the related link:CONTRIBUTING.adoc[CONTRIBUTING] document if you are interested in making contributions.
