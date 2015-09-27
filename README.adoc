@@ -1,3 +1,5 @@
+image:https://travis-ci.org/learning-spring-boot/learning-spring-boot-code-1.2.svg?branch=master["Build Status", link="https://travis-ci.org/learning-spring-boot/learning-spring-boot-code-1.2"]
+
 == Learning Spring Boot 
 
 image::http://blog.greglturnquist.com/wp-content/uploads/2014/11/3021OS_mockupcover_normal.png[float="right"]
