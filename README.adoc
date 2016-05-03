@@ -1,4 +1,6 @@
-image:https://travis-ci.org/learning-spring-boot/learning-spring-boot-code-1.2.svg?branch=master["Build Status", link="https://travis-ci.org/learning-spring-boot/learning-spring-boot-code-1.2"]
+image:https://travis-ci.org/learning-spring-boot/learning-spring-boot-code.svg?branch=master["Build Status", link="https://travis-ci.org/learning-spring-boot/learning-spring-boot-code"]
+
+IMPORTANT: You can browse the original version of code released with the book https://github.com/learning-spring-boot/learning-spring-boot-code/tree/1st-edition[here].
 
 == Learning Spring Boot 
 
