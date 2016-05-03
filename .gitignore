@@ -1,8 +1,5 @@
-*.html
-*.jar
 .idea
 *.iml
-target
 build
 .gradle
 *.keystore
