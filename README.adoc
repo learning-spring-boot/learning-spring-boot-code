@@ -6,6 +6,8 @@ IMPORTANT: You can browse the original version of code released with the book ht
 
 image::http://blog.greglturnquist.com/wp-content/uploads/2014/11/3021OS_mockupcover_normal.png[float="right"]
 
+NOTE: This code has been update using the latest stable version of Spring Boot 1.2.
+
 This is a standing repo of the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_]. While the book explains how to use the gradle wrapper, the code here already has the gradle wrapper set up. That means that for http://gradle.org/[gradle-based] apps, you can immediately run them assuming you have Java installed on your box.
 
 NOTE: Some bits of the code have had significant improvement, such as chapter 3's usage of JMS APIs added to Spring Framework 4.1. Also, I have updated all the code to now use `@SpringBootApplication` instead of `@EnableAutoConfiguration`, etc. So, some bits of the book are obsolete in their explanations. But in total, the code is robust and the concepts still solid.
@@ -17,8 +19,6 @@ While not evident when you read the book, each chapter has a progressive approac
 If you are looking for the details explaining each app, please https://www.packtpub.com/application-development/learning-spring-boot[order a copy of the book].
 
 It may sound presumptuous, but I have high confidence in the fidelity of the code. I developed each version of each chapter's app inside my IDE and ran it repeatedly. Since I http://blog.greglturnquist.com/2014/05/asciidoc-springboot-packtpub-awesome-tool-chain.html[wrote the entire book using Asciidoctor], I simply imported the source code directly into the manuscript. The risk at hand is not importing some aspect of the app.
-
-NOTE: This code has been update using the latest stable version of Spring Boot 1.2. To see the original code printed in the book, please visit https://github.com/learning-spring-boot/learning-spring-boot-code. I intend to keep this up-to-date, and then release another repo when Spring Boot 1.3 becomes stable.
 
 Stay tuned. In the meantime, http://www.urbandictionary.com/define.php?term=share%20and%20enjoy[share and enjoy]!
 
