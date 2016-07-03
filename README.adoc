@@ -9,11 +9,11 @@ image:https://travis-ci.org/learning-spring-boot/learning-spring-boot-code.svg?b
 
 == Learning Spring Boot 
 
-image::http://blog.greglturnquist.com/wp-content/uploads/2014/11/3021OS_mockupcover_normal.png[float="right"]
+image::http://greglturnquist.com/wp-content/uploads/2014/11/3021OS_mockupcover_normal.png[float="right"]
 
 NOTE: This code has been updated using the latest stable version of Spring Boot 1.3.
 
-This is a standing repo of the code for http://blog.greglturnquist.com/category/learning-spring-boot[_Learning Spring Boot_]. While the book explains how to use the gradle wrapper, the code here already has the gradle wrapper set up. That means that for http://gradle.org/[gradle-based] apps, you can immediately run them assuming you have Java installed on your box.
+This is a standing repo of the code for http://greglturnquist.com/learning-spring-boot[_Learning Spring Boot_]. While the book explains how to use the gradle wrapper, the code here already has the gradle wrapper set up. That means that for http://gradle.org/[gradle-based] apps, you can immediately run them assuming you have Java installed on your box.
 
 NOTE: Some bits of the code have had significant improvement, such as chapter 3's usage of JMS APIs added to Spring Framework 4.1. Also, I have updated all the code to now use `@SpringBootApplication` instead of `@EnableAutoConfiguration`, etc. So, some bits of the book are obsolete in their explanations. But in total, the code is robust and the concepts still solid.
 
